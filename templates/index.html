@@ -1,0 +1,29 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block heading %}
+<p class="title has-text-centered">
+  webpage's Sentiment Analysis
+</p>
+<center><h1>ENTER WEBPAGE'S URL</h1></center>
+{% endblock %}
+
+{% block main %}
+
+  <!-- place form code here for submitting the url -->
+  <div class="columns">
+    <div class="column is-offset-2 is-8">
+      <form action="{{ url_for('results') }}" method="POST">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input type="text" name="url" class="input" placeholder="http://coderatwork7.firebaseapp.com">
+          </div>
+          <div class="control">
+            <button class="button ">ANALYSE !</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
